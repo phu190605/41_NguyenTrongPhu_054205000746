@@ -138,14 +138,19 @@ void EmployeeManager::addEmployee() {
 }
 
 void EmployeeManager::deleteEmployee(const std::string& id) {
+    // Duyệt qua danh sách nhân viên
     for (auto it = employees.begin(); it != employees.end(); ++it) {
+        // Kiểm tra nếu mã nhân viên trùng khớp
         if ((*it)->getId() == id) {
+            // Xóa nhân viên khỏi danh sách và giải phóng bộ nhớ
             delete* it;
             employees.erase(it);
+            // Thông báo đã xóa thành công
             std::cout << "Deleted employee with ID: " << id << std::endl;
-            return;
+            return; // Kết thúc phương thức sau khi xóa
         }
     }
+    // Thông báo nếu không tìm thấy nhân viên
     std::cout << "Employee with ID: " << id << " not found." << std::endl;
 }
 
@@ -177,7 +182,7 @@ void EmployeeManager::updateHoursForEmployee(string id, int hours) {
             return;
         }
     }
-    throw invalid_argument("Nhân viên không tồn tại hoặc không phải nhân viên bán thời gian");
+    throw invalid_argument("Nhan vien khong ton tai hoac khong phai nhan vien ban thoi gian");
 }
 
 void EmployeeManager::sortEmployeesByStartDate() {

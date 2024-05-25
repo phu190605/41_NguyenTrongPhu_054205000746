@@ -26,14 +26,14 @@ int FullTimeEmployee::getYearsOfExperience() const { return yearsOfExperience; }
 
 void FullTimeEmployee::setSalaryCoefficient(double salaryCoefficient) {
     if (salaryCoefficient < 1.65 || salaryCoefficient > 8.00) {
-        throw invalid_argument("Hệ số lương phải từ 1.65 đến 8.00");
+        throw invalid_argument("He so luong phai tu 1.65 den 8.00");
     }
     this->salaryCoefficient = salaryCoefficient;
 }
 
 void FullTimeEmployee::setYearsOfExperience(int yearsOfExperience) {
     if (yearsOfExperience < 0) {
-        throw invalid_argument("Số năm kinh nghiệm phải >= 0");
+        throw invalid_argument("So nam kinh nghiem phai >= 0");
     }
     this->yearsOfExperience = yearsOfExperience;
 }
