@@ -93,7 +93,7 @@ void Showroom::NhapXe(vector<Xe*>& danhSachXe) {
         int soCho;
         bool validLoaiXe = false;
         do {
-            cout << "Nhap loai xe (xe bus, xe ban tai, xe du lich, xe khac): ";
+            cout << "Nhap loai xe (XeBus, XeBanTai, XeDuLich, XeKhac): ";
             cin >> loaiXeInput;
             try {
                 kiemTraLoaiXe(loaiXeInput);
